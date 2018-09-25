@@ -1,0 +1,29 @@
+#include"MyHeader.h"
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Function Name: ArrayReverse
+//  Description: Accepts base address and size of an array and revese the contents of the array.
+//  Input: int[IN-OUT,IN]
+//  Output: NA
+//  Author: Vinayak Mahendra Patil
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+void ArrayReverse(int *iArr,int iSize)
+{
+    int iStart=0,iEnd=iSize-1,iTemp;
+    if((iArr==NULL)||(iSize<=0))
+    {
+        printf("Incorrect Input!\n");
+        return;
+    }
+
+    while(iStart<=iEnd)
+    {
+        iTemp=iArr[iStart];
+        iArr[iStart]=iArr[iEnd];
+        iArr[iEnd]=iTemp;
+
+        iStart++;
+        iEnd--;
+    }
+}
